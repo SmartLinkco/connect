@@ -160,8 +160,9 @@
 }
 
 .top {
-    top: 55px;
+    top: 50px;
     left: 35px;
+    box-shadow: 5px 5px 5px rgb(31, 33, 34);
     position: absolute;
     border: 1px double black;
     z-index: 100;

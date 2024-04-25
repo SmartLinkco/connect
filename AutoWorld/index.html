@@ -148,7 +148,58 @@
                 <div class="options">
                     <div class="option">
                         <label for="carMakeModel">Car Make/Model:</label>
-                        <input type="text" id="carMakeModel">
+                        <select id="carMakeModel">
+                            <option value="">--Select--</option>
+                            <option value="Toyota(Corolla)">Toyota(Corolla)</option>
+                            <option value="Toyota(Camry)">Toyota(Camry)</option>
+                            <option value="Toyota(RAV4)">Toyota(RAV4)</option>
+                            <option value="Toyota(Prius)">Toyota(Prius)</option>
+                            <option value="Toyota(Highlander)">Toyota(Highlander)</option>
+                            <option value="Honda(Civic)">Honda(Civic)</option>
+                            <option value="Honda(Accord)">Honda(Accord)</option>
+                            <option value="Honda(CR-V)">Honda(CR-V)</option>
+                            <option value="Honda(Pilot)">Honda(Pilot)</option>
+                            <option value="Ford(Mustang)">Ford(Mustang)</option>
+                            <option value="Ford(Fusion)">Ford(Fusion)</option>
+                            <option value="Ford(Escape)">Ford(Escape)</option>
+                            <option value="Ford(Explorer)">Ford(Explorer)</option>
+                            <option value="Ford(F-150)">Ford(F-150)</option>
+                            <option value="Chevrolet(Malibu)">Chevrolet(Malibu)</option>
+                            <option value="Chevrolet(Equinox)">Chevrolet(Equinox)</option>
+                            <option value="Chevrolet(Silverado)">Chevrolet(Silverado)</option>
+                            <option value="Chevrolet(Camaro)">Chevrolet(Camaro)</option>
+                            <option value="Chevrolet(Tahoe)">Chevrolet(Tahoe)</option>
+                            <option value="Nissan(Altima)">Nissan(Altima)</option>
+                            <option value="Nissan(Rogue)">Nissan(Rogue)</option>
+                            <option value="Nissan(Sentra)">Nissan(Sentra)</option>
+                            <option value="Nissan(Pathfinder)">Nissan(Pathfinder)</option>
+                            <option value="Nissan(Titan)">Nissan(Titan)</option>
+                            <option value="BMW(3 Series)">BMW(3 Series)</option>
+                            <option value="BMW(5 Series)">BMW(5 Series)</option>
+                            <option value="BMW(X3)">BMW(X3)</option>
+                            <option value="BMW(X5)">BMW(X5)</option>
+                            <option value="BMW(X6)">BMW(X6)</option>
+                            <option value="Mercedes-Benz(C-Class)">Mercedes-Benz(C-Class)</option>
+                            <option value="Mercedes-Benz(E-Class)">Mercedes-Benz(E-Class)</option>
+                            <option value="Mercedes-Benz(GLC)">Mercedes-Benz(GLC)</option>
+                            <option value="Mercedes-Benz(GLE)">Mercedes-Benz(GLE)</option>
+                            <option value="Mercedes-Benz(S-Class)">Mercedes-Benz(S-Class)</option>
+                            <option value="Audi(A3)">Audi(A3)</option>
+                            <option value="Audi(A4)">Audi(A4)</option>
+                            <option value="Audi(Q5)">Audi(Q5)</option>
+                            <option value="Audi(Q7)">Audi(Q7)</option>
+                            <option value="Audi(A6)">Audi(A6)</option>
+                            <option value="Hyundai(Elantra)">Hyundai(Elantra)</option>
+                            <option value="Hyundai(Sonata)">Hyundai(Sonata)</option>
+                            <option value="Hyundai(Tucson)">Hyundai(Tucson)</option>
+                            <option value="Hyundai(Santa Fe)">Hyundai(Santa Fe)</option>
+                            <option value="Hyundai(Palisade)">Hyundai(Palisade)</option>
+                            <option value="Volkswagen(Jetta)">Volkswagen(Jetta)</option>
+                            <option value="Volkswagen(Passat)">Volkswagen(Passat)</option>
+                            <option value="Volkswagen(Tiguan)">Volkswagen(Tiguan)</option>
+                            <option value="Volkswagen(Atlas)">Volkswagen(Atlas)</option>
+                            <option value="Volkswagen(Golf)">Volkswagen(Golf)</option>
+                        </select>
                     </div>
                     <div class="option">
                         <label for="issueCategory">Select the issue category:</label>
@@ -170,7 +221,93 @@
                     </div>
                     <div class="option">
                         <label for="location">Location (Optional):</label>
-                        <input type="text" id="location">
+                        <select id="locations">
+                            <option value="">--Select Location--</option>
+                            <optgroup label="Greater Accra">
+                                <option value="Accra">Accra</option>
+                                <option value="Tema">Tema</option>
+                                <option value="Ashaiman">Ashaiman</option>
+                                <option value="Madina">Madina</option>
+                                <option value="Teshie">Teshie</option>
+                            </optgroup>
+                            <optgroup label="Ashanti">
+                                <option value="Kumasi">Kumasi</option>
+                                <option value="Obuasi">Obuasi</option>
+                                <option value="Ejisu">Ejisu</option>
+                                <option value="Mampong">Mampong</option>
+                                <option value="Konongo">Konongo</option>
+                            </optgroup>
+                            <optgroup label="Western">
+                                <option value="Sekondi-Takoradi">Sekondi-Takoradi</option>
+                                <option value="Tarkwa">Tarkwa</option>
+                                <option value="Axim">Axim</option>
+                                <option value="Elubo">Elubo</option>
+                                <option value="Bibiani">Bibiani</option>
+                            </optgroup>
+                            <optgroup label="Central">
+                                <option value="Cape Coast">Cape Coast</option>
+                                <option value="Mankessim">Mankessim</option>
+                                <option value="Kasoa">Kasoa</option>
+                                <option value="Winneba">Winneba</option>
+                                <option value="Twifo Praso">Twifo Praso</option>
+                            </optgroup>
+                            <optgroup label="Eastern">
+                                <option value="Koforidua">Koforidua</option>
+                                <option value="Nkawkaw">Nkawkaw</option>
+                                <option value="Suhum">Suhum</option>
+                                <option value="Akim Oda">Akim Oda</option>
+                                <option value="Akosombo">Akosombo</option>
+                            </optgroup>
+                            <optgroup label="Northern">
+                                <option value="Tamale">Tamale</option>
+                                <option value="Yendi">Yendi</option>
+                                <option value="Bimbila">Bimbila</option>
+                                <option value="Salaga">Salaga</option>
+                                <option value="Damongo">Damongo</option>
+                            </optgroup>
+                            <optgroup label="Volta">
+                                <option value="Ho">Ho</option>
+                                <option value="Sogakope">Sogakope</option>
+                                <option value="Keta">Keta</option>
+                                <option value="Hohoe">Hohoe</option>
+                                <option value="Jasikan">Jasikan</option>
+                            </optgroup>
+                            <optgroup label="Upper East">
+                                <option value="Bolgatanga">Bolgatanga</option>
+                                <option value="Navrongo">Navrongo</option>
+                                <option value="Bawku">Bawku</option>
+                                <option value="Zebilla">Zebilla</option>
+                                <option value="Paga">Paga</option>
+                            </optgroup>
+                            <optgroup label="Upper West">
+                                <option value="Wa">Wa</option>
+                                <option value="Tumu">Tumu</option>
+                                <option value="Nandom">Nandom</option>
+                                <option value="Jirapa">Jirapa</option>
+                                <option value="Lawra">Lawra</option>
+                            </optgroup>
+                            <optgroup label="Western North">
+                                <option value="Sefwi Wiawso">Sefwi Wiawso</option>
+                                <option value="Bibiani">Bibiani</option>
+                                <option value="Enchi">Enchi</option>
+                                <option value="Asankragwa">Asankragwa</option>
+                                <option value="Akontombra">Akontombra</option>
+                            </optgroup>
+                            <optgroup label="Bono East">
+                                <option value="Techiman">Techiman</option>
+                                <option value="Kintampo">Kintampo</option>
+                                <option value="Nkoranza">Nkoranza</option>
+                                <option value="Atebubu">Atebubu</option>
+                                <option value="Prang">Prang</option>
+                            </optgroup>
+                            <optgroup label="Ahafo">
+                                <option value="Goaso">Goaso</option>
+                                <option value="Hwidiem">Hwidiem</option>
+                                <option value="Bechem">Bechem</option>
+                                <option value="Duayaw Nkwanta">Duayaw Nkwanta</option>
+                                <option value="Ntotroso">Ntotroso</option>
+                            </optgroup>
+                        </select>                        
                     </div>
                     <div class="option">
                         <label for="urgencyLevel">Urgency Level:</label>
