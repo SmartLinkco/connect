@@ -23,7 +23,7 @@ function load(){
 }
 
 function back(){
-    window.location.href= "AutoworldHome.html";
+    window.location.href= "index.html";
 }
 
 menuToggle.addEventListener("click", toggleMenu);
