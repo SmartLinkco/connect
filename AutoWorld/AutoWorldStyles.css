@@ -13,6 +13,9 @@
 .logo {
     display: flex;
     align-items: center;
+    position: absolute;
+    left: 25px;
+    top: 25px;
 }
 
 .button {
@@ -158,8 +161,8 @@
 }
 
 .top {
-    top: 65px;
-    left: 45px;
+    top: 45px;
+    left: 25px;
     position: absolute;
     border: 1px double black;
     z-index: 100;
