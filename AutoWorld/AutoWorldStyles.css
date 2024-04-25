@@ -258,6 +258,7 @@
 
 .adverts p {
   position: absolute;
+  text-align: center;  
   font-weight: 700;
   font-size: 12px;
   top: 5px;
