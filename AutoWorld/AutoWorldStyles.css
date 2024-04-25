@@ -2,7 +2,7 @@
 .header-main {
     display: flex;
     justify-content: space-between;
-    padding: 15px;
+    padding: 0 5px 15px 5px;
     position: relative;
 }
 
@@ -13,9 +13,7 @@
 .logo {
     display: flex;
     align-items: center;
-    position: absolute;
-    left: 25px;
-    top: 25px;
+    
 }
 
 .button {
@@ -161,8 +159,8 @@
 }
 
 .top {
-    top: 45px;
-    left: 25px;
+    top: 55px;
+    left: 45px;
     position: absolute;
     border: 1px double black;
     z-index: 100;
