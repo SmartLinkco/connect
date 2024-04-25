@@ -2,6 +2,7 @@
 .header-main {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0 5px 15px 5px;
     position: relative;
 }
@@ -160,7 +161,7 @@
 
 .top {
     top: 55px;
-    left: 45px;
+    left: 35px;
     position: absolute;
     border: 1px double black;
     z-index: 100;
