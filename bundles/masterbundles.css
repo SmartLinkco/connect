@@ -1,0 +1,233 @@
+body {
+    padding: 60px 20px;
+    background-color: rgb(236, 231, 231);
+}
+
+#header {
+    background-color: white;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 5px 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    display: flex;
+}
+
+#trigger {
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    opacity: 95%;
+}
+
+#sidebar .content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#logo {
+    height: 40px;
+}
+
+#logopic {
+    width: 40px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+#user {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#userpic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 10px;
+}
+
+#username {
+    font-size: 12px;
+}
+
+#email {
+    font-size: 10px;  
+    color: rgb(102, 102, 210);
+}
+
+#navigations {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#sections {
+    width: 100%;
+    height: 40px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+#icon{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #f1eeee;
+}
+
+#action {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    color: rgb(240, 233, 233);
+    font-size: 12px;
+    padding: 0 20px;
+}
+
+#bars {
+    background-color: gray;
+    height: 2px;
+    width: 20px;
+    margin: 2px;
+}
+
+#shortcut {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+#access {
+    width: 150px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: rgb(27, 112, 95);
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: white;
+}
+
+#accesss {
+    width: 150px;
+    height: 35px;
+    border-radius: 5px;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: white;
+    background-color: black;
+}
+
+#footer {
+    background-color: white;
+    height: 50px;
+    position: fixed;
+    bottom: 0px;
+    left: 3px;
+    right: 3px;
+    padding: 5px 22px;
+    border-top: 0.5px solid rgb(185, 179, 179);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#frame {
+    height: 40px;
+    margin: 20px;
+    border-radius: 20px;
+    flex: 1;
+    background-color: rgb(27, 138, 129);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+#main {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+#snapshot {
+    font-size: 10px;
+    font-weight: 700;
+    border-left: 2px solid gray;
+    padding: 5px;
+    color: rgb(65, 62, 62);
+}
+
+#networks {
+    background-color: rgb(42, 37, 37);
+    border-radius: 10px;
+    height: 105px;
+    margin: 10px 0px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+#paymentTrend {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    height: 300px;
+    margin: 10px 0px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+#balances {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    height: 95px;
+    margin: 10px 0px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+#lastPayments {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    height: 350px;
+    margin: 10px 0px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
