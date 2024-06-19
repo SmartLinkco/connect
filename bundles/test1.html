@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Checkout</h1>
+    <div id="selectedBundles"></div>
+    <button onclick="clearBundles()">Clear Bundles</button>
+
+    <script>
+        function loadBundles() {
+            const bundles = JSON.parse(localStorage.getItem('bundles')) || [];
+            const bundleContainer = document.getElementById('selectedBundles');
+
+            if (bundles.length === 0) {
+                bundleContainer.innerHTML = 'No bundles selected.';
+                return;
+            }
+
+            let total = 0;
+            bundles.forEach(bundle => {
+                const div = document.createElement('div');
+                div.textContent = `${bundle.size} - $${bundle.price}`;
+                bundleContainer.appendChild(div);
+                total += parseFloat(bundle.price);
+            });
+
+            const totalDiv = document.createElement('div');
+            totalDiv.textContent = `Total: $${total.toFixed(2)}`;
+            bundleContainer.appendChild(totalDiv);
+        }
+
+        function clearBundles() {
+            localStorage.removeItem('bundles');
+            loadBundles();
+        }
+
+        // Load bundles on page load
+        window.onload = loadBundles;
+    </script>
+</body>
+</html>

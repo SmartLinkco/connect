@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Bundles</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>Select Your Data Bundle</h1>
+    <div class="bundle" onclick="saveBundle('1GB', '10')">1GB - $10</div>
+    <div class="bundle" onclick="saveBundle('5GB', '45')">5GB - $45</div>
+    <div class="bundle" onclick="saveBundle('10GB', '80')">10GB - $80</div>
+    <div class="bundle" onclick="saveBundle('20GB', '150')">20GB - $150</div>
+    <button onclick="proceedToCheckout()">Proceed to Checkout</button>
+
+    <script>
+        function saveBundle(size, price) {
+            const bundles = [];//JSON.parse(localStorage.getItem('bundles')) || [];
+            bundles.push({ size, price });
+            localStorage.setItem('bundles', JSON.stringify(bundles));
+            alert(`${size} bundle for $${price} has been added.`);
+        }
+
+        function proceedToCheckout() {
+            window.location.href = 'test1.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,779 @@
+body {
+    padding: 60px 20px;
+    background-color: rgb(236, 231, 231);
+}
+
+#header {
+    background-color: white;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 5px 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    display: flex;
+    z-index: 20;
+}
+
+#trigger {
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#trigger:hover {
+    cursor: pointer;
+    background-color: #dfdcdc;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    opacity: 95%;
+}
+
+#sidebar .content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#logo {
+    height: 40px;
+}
+
+#logopic {
+    width: 40px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+#user {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#userpic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 10px;
+}
+
+#username {
+    font-size: 12px;
+}
+
+#email {
+    font-size: 10px;  
+    color: aqua;
+}
+
+#username:hover, 
+#email:hover, 
+#action:hover, 
+#userpic, 
+#logopic{
+    cursor: pointer;
+} 
+
+#navigations {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#sections {
+    width: 100%;
+    height: 40px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+#icon{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #f1eeee;
+}
+
+#action {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    color: rgb(240, 233, 233);
+    font-size: 12px;
+    padding: 0 20px;
+}
+
+#action:hover {
+    padding-left: 25px;
+    font-size: 14px;
+    color: aqua;
+}
+
+#bars {
+    background-color: gray;
+    height: 2px;
+    width: 20px;
+    margin: 2px;
+}
+
+#shortcut {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+#access {
+    width: 150px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: rgb(27, 112, 95);
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: white;
+}
+
+#accesss {
+    width: 150px;
+    height: 35px;
+    border-radius: 5px;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: white;
+    background-color: black;
+}
+
+#access:hover, 
+#accesss:hover {
+    cursor: pointer;
+    font-weight: 900;
+}
+
+#footer {
+    background-color: white;
+    height: 50px;
+    position: fixed;
+    bottom: 0px;
+    left: 3px;
+    right: 3px;
+    padding: 5px 22px;
+    border-top: 0.5px solid rgb(185, 179, 179);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#frame {
+    height: 40px;
+    margin: 20px;
+    border-radius: 20px;
+    flex: 1;
+    background-color:;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:  rgb(27, 138, 129);
+}
+
+#icons {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color:  rgb(27, 138, 129);
+}
+
+#text {
+    margin:  5px 0 0 0;
+}
+
+#icons:hover,
+#text:hover {
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+#main {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+#snapshot {
+    font-size: 10px;
+    font-weight: 700;
+    border-left: 2px solid gray;
+    padding: 5px;
+    color: rgb(65, 62, 62);
+}
+
+#at_networks,
+#mtn_networks,
+#atBig_networks {
+    background-color: rgb(42, 37, 37);
+    border-radius: 10px;
+    height: 115px;
+    margin: 10px 0px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+#at_networks:hover,
+#mtn_networks:hover,
+#atBig_networks:hover {
+    cursor: pointer;
+    background-color: rgb(65, 62, 62);
+}
+
+#network_info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 0 0 10px 0;
+    font-size: 11px;
+    font-family: Helvetica, sans-serif, Arial;
+    font-weight: 700;
+}
+
+#network_logo {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+#network_logo img {
+    width: 25px;
+    border-radius: 2px;
+}
+
+#paymentTrend {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    height: 420px;
+    margin: 10px 0px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.slider-container {
+    width: 100%;
+    margin: 10px 0;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: max-content;
+}
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    align-items: cente;
+    justify-content: center;
+    scroll-snap-align: start;
+    background-color: rgb(189, 187, 187);
+    margin: 0 10px;
+    height: 50px;
+    border-radius: 5px;
+    min-width: 100px;
+    box-sizing: border-box;
+    padding: 0 10px;
+    font-family: sans-serif, Arial, Helvetica;
+}
+
+#dash {
+    width: 20px;
+    height: 3px;
+    background-color: gray;
+    border-radius: 1px;
+}
+
+#trend_notice {
+    font-size: 11px;
+    font-weight: 900;
+}
+
+#trend_amount {
+    font-size: 9px;
+    font-weight: 700;
+    margin: 2px 0;
+}
+
+#trend_type {
+    font-size: 9px;
+}
+
+.chart-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    width: 100%;
+    height: 300px;
+    border-top: 1px solid #ccc;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.y-axis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    margin-right: 20px;
+}
+
+.y-axis-label {
+    text-align: right;
+    margin-right: 10px;
+    font-size: 12px;
+    color: #555;
+}
+
+.bar-chart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+
+.bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+}
+
+.bar-fill {
+    width: 100%;
+    background-color: #007BFF;
+    margin-bottom: 10px;
+}
+
+.bar-label {
+    text-align: center;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+#balances {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    height: 95px;
+    margin: 10px 0px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 20px;box-sizing: border-box;
+}
+
+#commission_amount {
+    font-weight: 700;
+    font-size: 11px;
+    color: blue;
+}
+
+#commission_info {
+    padding: 5px 0 10px 0;
+    font-size: 9px;
+}
+
+#commission_notice {
+    color: green;
+    font-weight: 700;
+    font-size: 11px;
+}
+
+#top_up {
+    color: red;
+    font-weight: 700;
+    font-size: 11px; 
+}
+
+#top_up:hover {
+    cursor: pointer;
+    font-family: 'Arial Narrow Bold', sans-serif;
+   
+}
+
+#lastPayments {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    height: 350px;
+    margin: 0px 0px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+}
+
+#last_transactions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+#view_all {
+    color: green;
+}
+
+#view_all:hover {
+    cursor: pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-table {
+    width: 200%;
+    height: 290px;
+    border-collapse: collapse;
+}
+
+.transaction-table th, .transaction-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.transaction-table th {
+    background-color: #007BFF;
+    color: white;
+}
+
+.transaction-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.transaction-table tr:hover {
+    background-color: #e9e9e9;
+}
+
+/*MTN Portal Styles*/
+
+#mtn_banner {
+    width: 100%;
+    height: 120px;
+    border-radius: 10px;
+    background-image: url(media/mtn\ banner.jpeg);
+    background-size:contain;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    position: relative;
+}
+
+#mtnlist_banner {
+    width: 100%;
+    height: 120px;
+    border-radius: 10px;
+    background-color: #8ac1fc;
+    background-size:contain;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    position: relative;
+}
+
+#at_banner {
+    width: 100%;
+    height: 120px;
+    border-radius: 10px;
+    background-image: url(media/atbanner.webp);
+    background-size:contain;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    position: relative; 
+}
+
+#master_net {
+    color: yellow;
+    background-color: #555;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+#masterlist_net {
+    color: black;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+#master_net_at {
+    color: white;
+    font-size: larger;
+    font-weight: 700;
+    background-color: #3d4be0;
+    font-family:Arial, Helvetica, sans-serif;
+    opacity: 90%;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#warning {
+    background-color: white;
+    position: absolute;
+    left: 4px;
+    right: 4px;
+    bottom: 5px;
+    text-align: center;
+    padding: 10px 35px;
+    border-radius: 5px;
+    color: red;
+    font-family:Arial, Helvetica, sans-serif ;
+}
+
+#displayData {
+    position: absolute;
+    left: 4px;
+    right: 4px;
+    bottom: 8px;
+    font-weight: 700;
+    color: red;
+    text-align: center;
+    padding: 10px 35px;
+    border-radius: 5px;
+    font-family:Arial, Helvetica, sans-serif ;
+}
+
+#input_area {
+    width: 100%;
+    height: 280px;
+    border-radius: 10px;
+    background-color: #f7f8f9; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#support {
+    position: fixed;
+    bottom: 70px;
+    right: 30px;
+    width: 90px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#input_area {
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    font-family: sans-serif, Arial, Helvetica;
+}
+
+#number_input_text {
+    margin: 20px 0;
+}
+
+#receipient_phone {
+    margin-bottom: 7px;
+    color: #555;
+}
+
+#buy_for_myself_text {
+    color: #555; 
+}
+
+#receipient_number input {
+    flex: 1;
+    width: 100%;
+    height: 60px;
+    border: 1px solid #555;;
+    border-radius: 6px;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+#buy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 20px 0;
+    background-color: #33;
+}
+
+#myself_toggle {
+    background-color: #629fe1;
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 2px;
+}
+
+#key{
+    width: 25px;
+    height: 25px;
+    border-radius: 20%;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#key:active {
+    margin-left: 20px;
+}
+
+#submit input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #847e7e;
+    background-color: #ccc;
+}
+
+#support img {
+    width: 15px;
+    margin-right: 8px;
+}
+
+/*mtn prices list styles*/
+
+#mtn_prices,
+#openPromptButton {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+#mtn_prices:hover,
+#openPromptButton:hover {
+    cursor: pointer;
+    margin-left: 3px;
+}
+
+#gig_amount {
+    background-color: #007BFF;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 15px;
+}
+
+.overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.prompt {
+    background-color: white;
+    font-size: 12px;
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.prompt-button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#cancelButton {
+    background-color: #e82d27;
+    color: white;
+}
+
+#continueButton {
+    background-color: #48e148;
+    color: white;
+}
