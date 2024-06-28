@@ -113,6 +113,10 @@ function network(type) {
     localStorage.setItem('networkType', networkType);
 }
 
+function afa(){
+    window.location.href='https://paystack.com/pay/afa_registration';
+}
+
 // // Function to retrieve and use the networkType from local storage
 // function getNetworkType() {
 //     var networkType = localStorage.getItem('networkType');
