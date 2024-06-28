@@ -552,6 +552,21 @@ body {
     position: relative; 
 }
 
+#telecel_banner {
+    width: 100%;
+    height: 120px;
+    border-radius: 10px;
+    background-image: url(media/telecel banner.jpeg);
+    background-size:contain;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    position: relative; 
+}
+
 #master_net {
     color: yellow;
     background-color: #555;
