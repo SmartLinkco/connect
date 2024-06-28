@@ -161,7 +161,8 @@
             let handler = PaystackPop.setup({
                 //key: 'pk_live_b115ad14040e0e8b3e0c5f09cbbad902565b5b6b', // Replace with your public key
                 key: 'pk_test_1e1a90a12cbd41ded7cf2ed2d87a8676e4b38995', // Replace with your public key
-                email: beneficiaryNumber,
+                email: email,
+                beneficiaryNumber: beneficiaryNumber,
                 currency: 'GHS',
                 amount: amount,
                 ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference
