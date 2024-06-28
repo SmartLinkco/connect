@@ -185,7 +185,7 @@
             let amount = document.getElementById('amount').value * 100; // Convert to kobo
 
             // Generate a custom reference or get it from a form field
-            let customReference = beneficiaryNumber; // Example custom reference
+            let customReference = beneficiaryNumber + '-' + new Date().getTime(); // Example custom reference
 
             let handler = PaystackPop.setup({
                 key: 'pk_live_b115ad14040e0e8b3e0c5f09cbbad902565b5b6b', // Replace with your Paystack public key
