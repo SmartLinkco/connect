@@ -79,7 +79,7 @@ function sendData(type) {
     } else if (type == 'at'){
         window.location.href = `atPricelist.html?data=${encodeURIComponent(data)}`;
     } else {
-        window.location.href = `atBigpricelist.html?data=${encodeURIComponent(data)}`;
+        window.location.href = `atBigPricelist.html?data=${encodeURIComponent(data)}`;
     }
 }
 
