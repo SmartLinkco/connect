@@ -189,7 +189,8 @@ body {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    display: flex;
+    /* display: flex; */
+    display: none;
     align-items: center;
     justify-content: space-between;
 }
