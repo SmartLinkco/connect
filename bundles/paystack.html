@@ -149,29 +149,92 @@
         const storedData = localStorage.getItem('storedValue');
         document.getElementById('beneficiaryNumber').value = `${storedData}`;
 
+        // function payWithPaystack(e) {
+        //     e.preventDefault();
+
+        //     let email = document.getElementById('email-address').value;
+        //     let firstName = document.getElementById('first-name').value;
+        //     let lastName = document.getElementById('last-name').value;
+        //     let beneficiaryNumber = document.getElementById('beneficiaryNumber').value;
+        //     let amount = document.getElementById('amount').value * 100;
+
+        //     let handler = PaystackPop.setup({
+        //         //key: 'pk_live_b115ad14040e0e8b3e0c5f09cbbad902565b5b6b', // Replace with your public key
+        //         key: 'pk_test_1e1a90a12cbd41ded7cf2ed2d87a8676e4b38995', // Replace with your public key
+        //         email: email,
+        //         currency: 'GHS',
+        //         amount: amount,
+        //         ref: beneficiaryNumber, //''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference
+        //         callback: function(response){
+        //             let message = `Payment complete! Reference: ${beneficiaryNumber}` + response.reference;
+        //             alert(message);
+        //         }
+        //     });
+
+        //     handler.openIframe();
+        // }
+
         function payWithPaystack(e) {
             e.preventDefault();
 
+            // Get form values
             let email = document.getElementById('email-address').value;
             let firstName = document.getElementById('first-name').value;
             let lastName = document.getElementById('last-name').value;
             let beneficiaryNumber = document.getElementById('beneficiaryNumber').value;
-            let amount = document.getElementById('amount').value * 100;
+            let amount = document.getElementById('amount').value * 100; // Convert to kobo
+
+            // Generate a custom reference or get it from a form field
+            let customReference = 'BH-' + new Date().getTime(); // Example custom reference
 
             let handler = PaystackPop.setup({
-                //key: 'pk_live_b115ad14040e0e8b3e0c5f09cbbad902565b5b6b', // Replace with your public key
-                key: 'pk_test_1e1a90a12cbd41ded7cf2ed2d87a8676e4b38995', // Replace with your public key
+                key: 'pk_test_1e1a90a12cbd41ded7cf2ed2d87a8676e4b38995', // Replace with your Paystack public key
                 email: email,
-                currency: 'GHS',
                 amount: amount,
-                ref: beneficiaryNumber, //''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference
-                callback: function(response){
-                    let message = `Payment complete! Reference: ${beneficiaryNumber}` + response.reference;
-                    alert(message);
-                }
+                currency: 'GHS',
+                ref: customReference, // Custom reference
+                callback: function(response) {
+                    // Payment succeeded
+                    let reference = response.reference;
+                    alert('Payment complete! Reference: ' + reference);
+
+                    // Optionally, send the form data and reference to your server
+                    sendPaymentDetailsToServer(email, firstName, lastName, beneficiaryNumber, amount, reference);
+                },
+                onClose: function() {
+                    alert('Transaction was not completed, window closed.');
+                },
             });
 
             handler.openIframe();
+        }
+
+        function sendPaymentDetailsToServer(email, firstName, lastName, beneficiaryNumber, amount, reference) {
+            let paymentDetails = {
+                email: email,
+                firstName: firstName,
+                lastName: lastName,
+                beneficiaryNumber: beneficiaryNumber,
+                amount: amount,
+                reference: reference
+            };
+
+            fetch('your-server-endpoint', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(paymentDetails)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                alert('Payment details sent to the server successfully');
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('Error sending payment details to the server');
+            });
         }
     </script>
     <script src="https://js.paystack.co/v1/inline.js"></script>
