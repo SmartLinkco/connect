@@ -552,11 +552,12 @@ body {
     position: relative; 
 }
 
-#telecel_banner {
+#telecel {
     width: 100%;
     height: 120px;
     border-radius: 10px;
     background-image: url(media/telecel\ banner.jpg);
+    background-color: red;
     background-size:contain;
     margin: 20px 0;
     display: flex;
