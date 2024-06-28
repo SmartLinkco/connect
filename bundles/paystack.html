@@ -103,10 +103,10 @@
 <body>
     <form id="paymentForm">
         <h2>@ Bundles House</h2>
-<!--          <div class="form-group">
+         <div class="form-group">
             <label for="email">Email Address</label>
             <input type="email" id="email-address" required />
-        </div> -->
+        </div>
 <!--        <div class="form-group">
             <label for="first-name">First Name</label>
             <input type="text" id="first-name" />
@@ -178,7 +178,7 @@
             e.preventDefault();
 
             // Get form values
-            let email = 'smartlinkcompanylimited@gmail.com';
+            let email = document.getElementById('email-address').value;
             // let firstName = document.getElementById('first-name').value;
             // let lastName = document.getElementById('last-name').value;
             let beneficiaryNumber = document.getElementById('beneficiaryNumber').value;
