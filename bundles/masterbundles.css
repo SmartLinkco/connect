@@ -776,6 +776,7 @@ body {
 #cancelButton {
     background-color: #e82d27;
     color: white;
+    display: inline-block;
 }
 
 #continueButton {

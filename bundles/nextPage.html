@@ -116,66 +116,65 @@
             <input type="text" id="last-name" />
         </div>
         <div class="form-group">
-            <label for="beneficiaryNumber">Transferring Data to</label>
-            <input type="tel" id="beneficiaryNumber" value="" required readonly />
-            <!-- <input id="customer-phone" type="tel" class="element-is-input" data-validetta="required,number" required=""> -->
-        </div>
-        <div class="form-group">
             <label for="amount">Amount</label>
             <input type="tel" id="amount" value="" required readonly />
         </div>
         <div class="form-submit">
-            <button type="submit" onclick="payWithPaystack(event)">Pay</button>
+            <button type="submit" onclick="payWithPaystack()">Pay</button>
         </div>
     </form>
+    
     <script>
-        //
-        document.addEventListener('DOMContentLoaded', function() {
-            // Retrieve bundles from localStorage
-            const bundles = JSON.parse(localStorage.getItem('bundles')) || [];
-            
-            // Assuming you want to display the first item's amount
-            if (bundles.length > 0) {
-                const amount = parseFloat(bundles[0].amount); // Convert amount to float if necessary
-                const amountField = document.getElementById('amount');
-                if (amountField) {
-                    amountField.value = amount.toFixed(2); // Display amount in input field
-                } else {
-                    console.error('Element with id "amount" not found.');
-                }
+        window.onload = function() {
+            var gig_price = localStorage.getItem('gig_price');
+            document.getElementById('amount').value = gig_price;
+        }
+
+        function payWithPaystack() {
+            // Add Paystack payment integration here
+            const paymentForm = document.getElementById('paymentForm');
+            paymentForm.addEventListener("submit", payWithPaystack, false);
+
+            // Retrieve the previous amount value from localStorage
+            document.addEventListener('DOMContentLoaded', function() {
+            var amount = localStorage.getItem('amount');
+            if (amount) {
+                document.getElementById('amount').value = amount;
             }
-        });
+            });
 
-        const storedData = localStorage.getItem('storedValue');
-        document.getElementById('beneficiaryNumber').value = `${storedData}`;
-
-        function payWithPaystack(e) {
+            document.getElementById('paymentForm').addEventListener('submit', function(e) {
             e.preventDefault();
+            var amount = document.getElementById('amount').value;
+            // Save the amount value to localStorage
+            localStorage.setItem('amount', amount);
+            payWithPaystack();
+            });
 
-            let email = document.getElementById('email-address').value;
-            let firstName = document.getElementById('first-name').value;
-            let lastName = document.getElementById('last-name').value;
-            let beneficiaryNumber = document.getElementById('beneficiaryNumber').value;
-            let amount = document.getElementById('amount').value * 100;
+            function payWithPaystack(e) {
+            e.preventDefault();
 
             let handler = PaystackPop.setup({
                 key: 'pk_live_b115ad14040e0e8b3e0c5f09cbbad902565b5b6b', // Replace with your public key
-                //key: 'pk_test_1e1a90a12cbd41ded7cf2ed2d87a8676e4b38995', // Replace with your public key
-                email: email,
+                email: document.getElementById("email-address").value,
                 currency: 'GHS',
-                amount: amount,
-                ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference
+                amount: document.getElementById("amount").value * 100,
+                ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+                // label: "Optional string that replaces customer email"
+                // onClose: function(){
+                //   alert('Window closed.');
+                // },
                 callback: function(response){
-                    let message = 'Payment complete! Reference: ' + response.reference;
-                    alert(message);
+                let message = 'Payment complete! Reference: ' + response.reference;
+                alert(message);
                 }
             });
 
             handler.openIframe();
-        }
-    </script>
+            }
+                    }
+                </script>
     <script src="https://js.paystack.co/v1/inline.js"></script>
-    <!-- <script src="paystack.js"></script> -->
     <script src="masterbundles.js"></script>
 </body>
 </html>
