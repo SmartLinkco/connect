@@ -116,6 +116,11 @@
             <input type="text" id="last-name" />
         </div> -->
         <div class="form-group">
+            <label for="network_type">Transferring Data to</label>
+            <input type="text" id="network_type" value="" required readonly />
+            <!-- <input id="customer-phone" type="tel" class="element-is-input" data-validetta="required,number" required=""> -->
+        </div>
+        <div class="form-group">
             <label for="beneficiaryNumber">Transferring Data to</label>
             <input type="tel" id="beneficiaryNumber" value="" required readonly />
             <!-- <input id="customer-phone" type="tel" class="element-is-input" data-validetta="required,number" required=""> -->
@@ -148,6 +153,23 @@
 
         const storedData = localStorage.getItem('storedValue');
         document.getElementById('beneficiaryNumber').value = `${storedData}`;
+
+        var networkType = localStorage.getItem('networkType');
+        document.getElementById('network_type').value = `${networkType}`;
+
+        // // Function to retrieve and use the networkType from local storage
+        // function getNetworkType() {
+        //     var networkType = localStorage.getItem('networkType');
+        //     if (networkType) {
+        //         console.log('Retrieved network type from local storage:', networkType);
+        //         // Use the networkType as needed
+        //     } else {
+        //         console.log('No network type found in local storage.');
+        //     }
+        // }
+
+        // Call this function on page load to get the network type from local storage
+        getNetworkType();
 
         // function payWithPaystack(e) {
         //     e.preventDefault();

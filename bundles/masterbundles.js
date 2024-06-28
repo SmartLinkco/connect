@@ -100,6 +100,33 @@ if (data) {
     document.getElementById('beneficiaryNumber').innerText = 'No data received.';
 }
 
+function network(type) {
+    var networkType;
+    if (type === 'mtn') {
+        networkType = 'MTN';
+    } else if (type === 'at') {
+        networkType = 'AIRTEL TIGO';
+    } else {
+        networkType = 'TELECEL';
+    }
+    // Save the networkType to local storage
+    localStorage.setItem('networkType', networkType);
+}
+
+// // Function to retrieve and use the networkType from local storage
+// function getNetworkType() {
+//     var networkType = localStorage.getItem('networkType');
+//     if (networkType) {
+//         console.log('Retrieved network type from local storage:', networkType);
+//         // Use the networkType as needed
+//     } else {
+//         console.log('No network type found in local storage.');
+//     }
+// }
+
+// // Call this function on page load to get the network type from local storage
+// getNetworkType();
+
 
 // var openPromptButton = document.getElementById('openPromptButton');
 
