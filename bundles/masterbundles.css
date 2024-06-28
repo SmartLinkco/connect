@@ -3,6 +3,15 @@ body {
     background-color: rgb(236, 231, 231);
 }
 
+#back_arrow {
+    font-size: 12px;
+}
+
+#back_arrow:hover {
+    cursor: pointer;
+    color: red;
+}
+
 #header {
     background-color: white;
     height: 50px;
@@ -144,7 +153,7 @@ body {
 }
 
 #access {
-    width: 150px;
+    width: 120px;
     height: 35px;
     border-radius: 5px;
     background-color: rgb(27, 112, 95);
@@ -153,12 +162,12 @@ body {
     align-items: center;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
+    font-size: 10px;
     color: white;
 }
 
 #accesss {
-    width: 150px;
+    width: 120px;
     height: 35px;
     border-radius: 5px;
     margin: 0 5px;
@@ -166,7 +175,7 @@ body {
     align-items: center;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
+    font-size: 10px;
     color: white;
     background-color: black;
 }
