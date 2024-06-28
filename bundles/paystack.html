@@ -166,7 +166,7 @@
                 amount: amount,
                 ref: beneficiaryNumber, //''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference
                 callback: function(response){
-                    let message = 'Payment complete! Reference: ' + response.reference;
+                    let message = `Payment complete! Reference: ${beneficiaryNumber}` + response.reference;
                     alert(message);
                 }
             });
