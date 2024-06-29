@@ -2,10 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <title>Master Bundles</title>
     <link rel="stylesheet" href="masterbundles.css">
     <link rel="icon" href="media/favicon.jpeg" type="image/x-icon">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#000000">
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(function(registration) {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                })
+                .catch(function(error) {
+                    console.log('Service Worker registration failed:', error);
+                });
+        }
+    </script>
 </head>
 <body>
     <div id="header">
@@ -248,6 +261,7 @@
         setInterval(updateDateTime, 1000);
 
     </script>
+    <script src="service-worker.js"></script>
     <script src="masterbundles.js"></script>
 </body>
 </html>
