@@ -349,7 +349,7 @@ body {
     align-items: cente;
     justify-content: center;
     scroll-snap-align: start;
-    background-color: rgb(189, 187, 187);
+    background-color: rgb(168, 209, 235);
     margin: 0 10px;
     height: 50px;
     border-radius: 5px;
@@ -357,6 +357,7 @@ body {
     box-sizing: border-box;
     padding: 0 10px;
     font-family: sans-serif, Arial, Helvetica;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 #dash {
