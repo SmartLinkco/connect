@@ -871,3 +871,9 @@ body {
         left: -250;
     }
 }
+
+@media (display-mode: standalone) {
+    #footer {
+      display: flex; /* show in PWA mode */
+    }
+  }
