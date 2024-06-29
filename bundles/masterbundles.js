@@ -117,6 +117,37 @@ function afa(){
     window.location.href='https://paystack.com/pay/afa_registration';
 }
 
+//encrypt content when dev tools is opened
+(function() {
+    let devToolsOpened = false;
+    const element = new Image();
+    Object.defineProperty(element, 'id', {
+        get: function() {
+            devToolsOpened = true;
+            encryptContent();
+        }
+    });
+    console.log(element);
+    setInterval(function() {
+        devToolsOpened = false;
+        console.log(element);
+        if (devToolsOpened) {
+            // Additional actions if needed
+        }
+    }, 1000);
+})();
+
+function encryptContent() {
+    // Encrypt the content of the body
+    const content = document.body.innerHTML;
+    const encryptedContent = btoa(content); // Basic encryption using Base64 encoding
+    document.body.innerHTML = `
+        <h1>Encrypted Content</h1>
+        <p>${encryptedContent}</p>
+    `;
+    alert('Developer tools detected! Content has been encrypted.');
+}
+
 // // Function to retrieve and use the networkType from local storage
 // function getNetworkType() {
 //     var networkType = localStorage.getItem('networkType');
