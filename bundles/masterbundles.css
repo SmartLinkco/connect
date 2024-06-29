@@ -264,15 +264,15 @@ body {
 }
 
 #at_networks {
-    background: linear-gradient(90deg in oklab, blue, red);
+    background: linear-gradient(90deg, blue, red);
 }
 
 #mtn_networks {
-    background: linear-gradient(90deg in oklab, rgb(227, 190, 4), rgb(34, 29, 2));
+    background: linear-gradient(90deg, rgb(227, 190, 4), rgb(34, 29, 2));
 }
 
 #atBig_networks {
-    background: linear-gradient(90deg in oklab, rgb(0, 255, 200), red);
+    background: linear-gradient(90deg, rgb(0, 255, 200), red);
 }
 
 #at_networks:hover,
