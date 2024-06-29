@@ -252,7 +252,6 @@ body {
 #at_networks,
 #mtn_networks,
 #atBig_networks {
-    background-color: rgb(42, 37, 37);
     border-radius: 10px;
     height: 115px;
     margin: 10px 0px;
@@ -262,6 +261,18 @@ body {
     flex-direction: column;
     box-sizing: border-box;
     padding: 20px;
+}
+
+#at_networks {
+    background: linear-gradient(90deg in oklab, blue, red);
+}
+
+#mtn_networks {
+    background: linear-gradient(90deg in oklab, rgb(255, 213, 0), rgb(191, 255, 0));
+}
+
+#atBig_networks {
+    background: linear-gradient(90deg in oklab, rgb(0, 255, 200), red);
 }
 
 #at_networks:hover,
@@ -874,6 +885,7 @@ body {
 
 @media (display-mode: standalone) {
     #footer {
-      display: flex; /* show in PWA mode */
+        display: block;
+        display: flex; /* show in PWA mode */
     }
   }
