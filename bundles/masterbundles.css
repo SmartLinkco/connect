@@ -592,7 +592,7 @@ body {
     height: 120px;
     border-radius: 10px;
     background-image: url(media/telecel\ banner.jpg);
-    background-color: red;
+    /* background-color: red; */
     background-size:contain;
     margin: 20px 0;
     display: flex;
