@@ -217,7 +217,7 @@
             let beneficiaryNumber = document.getElementById('beneficiaryNumber').value;
             let network_type = document.getElementById('network_type').value;
             let amount = document.getElementById('amount').value * 100; // Convert to kobo
-            let gigSize = document.getElementById('bundleSize').value;
+            let gigSize = parseFloat(bundles[0].size);
 
             // Generate a custom reference or get it from a form field
             let customReference = beneficiaryNumber + '-' + network_type + '-' + gigSize + '-' + new Date().getTime(); // Example custom reference
