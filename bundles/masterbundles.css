@@ -25,6 +25,10 @@ body {
     z-index: 20;
 }
 
+.sunday-notice {
+    color: red;
+}
+
 #trigger {
     width: 30px;
     display: flex;
