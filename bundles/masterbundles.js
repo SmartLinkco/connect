@@ -96,8 +96,8 @@ if (data) {
     //document.getElementById('gig_number_show').innerText = `${size}`;
 
 } else {
-    document.getElementById('displayData').innerText = 'No data received.';
-    document.getElementById('beneficiaryNumber').innerText = 'No data received.';
+    document.getElementById('displayData').innerText = 'No number entered.';
+    document.getElementById('beneficiaryNumber').innerText = 'No number entered.';
 }
 
 function network(type) {
