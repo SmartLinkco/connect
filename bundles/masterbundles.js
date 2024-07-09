@@ -105,7 +105,7 @@ function network(type) {
     if (type === 'mtn') {
         networkType = 'MTN';
     } else if (type === 'at') {
-        networkType = 'AIRTEL TIGO';
+        networkType = 'AIRTELTIGO';
     } else {
         networkType = 'TELECEL';
     }
