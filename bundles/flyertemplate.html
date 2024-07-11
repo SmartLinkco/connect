@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Flyer Editor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #afe7fd;
+        }
+
+        #flyer {
+            border: 1px solid #000;
+            padding: 20px;
+            width: 500px;
+            height: 500px;
+            margin: 20px auto;
+            background-color: #fff;
+            background: url(media/flyer.jpeg);
+            background-size: cover;
+            position: relative;
+            padding-left: 250px;
+            box-sizing: border-box;
+        }
+
+        #flyerHeader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #flyerLogo {
+            width: 100px;
+            height: auto;
+            margin-right: 20px;
+            position: absolute;
+            top: 50px;
+            left: 140px;
+        }
+
+        #flyerLogo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        input[type="file"] {
+            margin-bottom: 20px;
+        }
+
+        #flyer h1 {
+            position: absolute;
+            right: 20px;
+            top: -10px;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        #flyer p {
+            font-size: 12px;
+            margin-top: 28px;
+            margin-bottom: 0px;
+        }
+
+        #priceList h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        #priceList ul {
+            margin-left: 80px;
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 70px;
+            text-align: left;
+        }
+
+        #priceList ul li {
+            font-size: 16px;
+            margin-bottom: 3px;
+            color: white;
+        }
+
+        #contactInfo p {
+            font-size: 15px;
+            margin-top: 10px;
+            margin-bottom: 38px;
+        }
+
+        #notice{
+            position: absolute;
+            bottom: -15px;
+            right: 0;
+            color: red;
+            font-size: 10px;
+            font-family: sans-serif;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .button-17 {
+        align-items: center;
+        appearance: none;
+        background-color: #fff;
+        border-radius: 24px;
+        border-style: none;
+        box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+        box-sizing: border-box;
+        color: #3c4043;
+        cursor: pointer;
+        display: inline-flex;
+        fill: currentcolor;
+        font-family: "Google Sans",Roboto,Arial,sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        height: 48px;
+        justify-content: center;
+        letter-spacing: .25px;
+        line-height: normal;
+        max-width: 100%;
+        overflow: visible;
+        padding: 2px 24px;
+        position: relative;
+        text-align: center;
+        text-transform: none;
+        transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: auto;
+        will-change: transform,opacity;
+        z-index: 0;
+        }
+
+        .button-17:hover {
+        background: #F6F9FE;
+        color: #174ea6;
+        }
+
+        .button-17:active {
+        box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+        outline: none;
+        }
+
+        .button-17:focus {
+        outline: none;
+        border: 2px solid #4285f4;
+        }
+
+        .button-17:not(:disabled) {
+        box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+        }
+
+        .button-17:not(:disabled):hover {
+        box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+        }
+
+        .button-17:not(:disabled):focus {
+        box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+        }
+
+        .button-17:not(:disabled):active {
+        box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+        }
+
+        .button-17:disabled {
+        box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="flyer">
+        <!-- <div id="flyerHeader">
+            <img id="flyerLogo" src="default-logo.png" alt="Logo">
+            <input type="file" id="logoUpload">
+        </div> -->
+        <h1 contenteditable="true" id="flyerTitle">Company Name</h1>
+        <p contenteditable="true" id="flyerDescription">Description of the flyer goes here. You can edit this text.</p>
+        <div id="contactInfo">
+            <p contenteditable="true" id="contactName">No. 0********* - John D**</p>
+            <!-- <p contenteditable="true" id="contactNumber">Contact Number: 123-456-7890</p> -->
+        </div>
+        <div id="priceList">
+            <ul>
+                <li contenteditable="true">&#x20B5;28 - &#x20B5;19 - &#x20B5;29</li>
+                <li contenteditable="true">&#x20B5;42 - &#x20B5;29 - &#x20B5;**</li>
+                <li contenteditable="true">&#x20B5;50 - &#x20B5;37 - &#x20B5;49</li>
+                <li contenteditable="true">&#x20B5;75 - &#x20B5;50 - &#x20B5;**</li>
+                <li contenteditable="true">&#x20B5;95 - &#x20B5;66 - &#x20B5;88</li>
+                <li contenteditable="true">&#x20B5;117 - &#x20B5;*** - &#x20B5;**</li>
+                <li contenteditable="true">&#x20B5;140 - &#x20B5;95 - &#x20B5;135</li>
+                <li contenteditable="true">&#x20B5;185 - &#x20B5;126 - &#x20B5;170</li>
+                <li contenteditable="true">&#x20B5;210 - &#x20B5;135 - &#x20B5;200</li>
+            </ul>
+        </div>
+        <div id="priceList">
+            <ul>
+                <li contenteditable="true">&#x20B5;6 --- &#x20B5;5 ---- &#x20B5;**</li>
+                <li contenteditable="true">&#x20B5;13 - &#x20B5;9 ---- &#x20B5;**</li>
+                <li contenteditable="true">&#x20B5;17 - &#x20B5;13 -- &#x20B5;**</li>
+                <li contenteditable="true">&#x20B5;21 - &#x20B5;17 -- &#x20B5;**</li>
+            </ul>
+            <div id="notice">Unable to save? Take a screenshot and crop! </div>
+        </div>
+    </div>
+    <button id="saveButton" class="button-17" role="button">Save Flyer</button>
+    <!-- <button id="saveButton">Save Flyer</button> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script>
+        document.getElementById('logoUpload').addEventListener('change', function(event) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                const img = document.getElementById('flyerLogo');
+                img.src = reader.result;
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        });
+
+        document.getElementById('saveButton').addEventListener('click', function() {
+            html2canvas(document.getElementById('flyer')).then(function(canvas) {
+                const link = document.createElement('a');
+                link.href = canvas.toDataURL('image/png');
+                link.download = 'flyer.png';
+                link.click();
+            });
+        });
+
+    </script>
+</body>
+</html>

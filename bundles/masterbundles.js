@@ -137,6 +137,10 @@ function afa(){
     }, 1000);
 })();
 
+function flyer(){
+    window.location.href = "flyertemplate.html";
+}
+
 function encryptContent() {
     // Encrypt the content of the body
     const content = document.body.innerHTML;
