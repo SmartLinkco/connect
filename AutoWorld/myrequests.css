@@ -1,8 +1,17 @@
 body{
     padding: 10px;
-    background-image: url(media/black\ map.avif);
+    background-image: url(media/worldmap.jpg);
+    background-position-x: right;
     position: relative;
     height: 100%;
+}
+
+.heading {
+    text-align: center;
+    margin: -50px 0 20px 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: larger;
+    font-weight: 700;
 }
 
 .searchButton {
