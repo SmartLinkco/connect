@@ -79,6 +79,8 @@ main{
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
+    transform: scale(1.05); /* Slight zoom effect */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
 }
 
 .nickName {
