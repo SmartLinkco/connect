@@ -72,7 +72,7 @@ body{
 
 .shoppic img {
     width: 90%;
-    height: fit-content; 
+    /* height: fit-content;  */
     border-top-right-radius: 50px;
     border-bottom-left-radius: 50px;
     border: 1px solid white;
