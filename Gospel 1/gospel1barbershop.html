@@ -5,12 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>GOSPEL 1 HAIR STUDIO</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="media/gospel logo.png" type="image/x-icon">
     <link rel="stylesheet" href="appointment.css">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="msapplication-TileColor" content="#000">
-    <meta name="theme-color" content="#000">
 </head>
 <body>
     <div class="header" id="header">
@@ -38,21 +33,27 @@
                 <img src="media/IMG_0636.jpg" alt="">
             </div>
             <div id="appointments">
-                <div id="pic"><div id="picback"></div> </div>
+                <div id="pic"><div id="picback"><img src="media/appointment.jpg" alt=""></div> </div>
                 <div id="pictext">Appointments</div> 
                 <div id="arrow">></div>
             </div>
             <div id="barbers">
-                <div id="pic"><div id="picback"></div></div>
+                <div id="pic"><div id="picback"><img src="media/barber head.png" alt=""></div></div>
                 <div id="pictext">Barbers</div> 
                 <div id="arrow">></div>
             </div>
-            <div id="services" onclick="window.location.href='#servicess'">
-                <div id="pic"><div id="picback"></div></div>
-                <div id="pictext">Services</div> 
+            <div id="services" onclick="window.location.href='#pricing'">
+                <div id="pic"><div id="picback"><img src="media/pricing.jpg" alt=""></div></div>
+                <div id="pictext">Pricing</div> 
                 <div id="arrow">></div>
             </div>
             <div class="servicess" id="servicess">
+                <div class="quote">
+                    <div class="quotationMarks">,,</div>
+                    <div class="quoteText">
+                        If You Keep Walking Past the Barbers, Eventually You'll Get a Haircut.
+                    </div>
+                </div>
                 <div class="topic">
                     <div class="longDash"></div>
                     <div class="topicText">Services</div>
@@ -143,7 +144,7 @@
                     </div>
                 </div>
             </div>
-            <div class="pricing">
+            <div class="pricing" id="pricing">
                 <div class="topic">
                     <div class="longDash"></div>
                     <div class="topicText">Pricing</div>
@@ -157,19 +158,27 @@
                 </div>
                 <div class="serviceCollection">
                     <div class="serviceName">Standard Haircut</div>
-                    <div class="serviceCharge">From &#8373;25.00</div>
+                    <div class="serviceCharge">From &#8373;30.00</div>
+                </div>
+                <div class="serviceCollection">
+                    <div class="serviceName">Standard Haircut + Dye</div>
+                    <div class="serviceCharge">From &#8373;40.00</div>
                 </div>
                 <div class="serviceCollection">
                     <div class="serviceName">Perming Haircut</div>
                     <div class="serviceCharge">From &#8373;50.00</div>
                 </div>
                 <div class="serviceCollection">
-                    <div class="serviceName">Standard Haircut + Dye</div>
-                    <div class="serviceCharge">From &#8373;35.00</div>
+                    <div class="serviceName">Perming Haircut + Dye</div>
+                    <div class="serviceCharge">From &#8373;80.00</div>
                 </div>
                 <div class="serviceCollection">
                     <div class="serviceName">Children Haircut</div>
                     <div class="serviceCharge">From &#8373;15.00</div>
+                </div>
+                <div class="serviceCollection">
+                    <div class="serviceName">Children Haircut + Dye</div>
+                    <div class="serviceCharge">From &#8373;25.00</div>
                 </div>
                 <div class="serviceCollection">
                     <div class="serviceName">Trim Your Beard</div>
@@ -181,20 +190,21 @@
                 <div class="endDetails">
                     <div class="openingHours">
                         <div class="heading">Opening Hours</div>
-                        <div class="details">Monday – Friday 9am – 5pm</div>
-                        <div class="details">Saturday 11am – 3pm</div>
-                        <div class="details">Sunday [Closed]</div>
+                        <div class="details">Monday – Sunday</div>
+                        <div class="details">8am – 9pm</div>
+                        <div class="details" id="details" onclick="bookAppointment()">Book Home Service On Tuesdays</div>
                     </div>
                     <div class="contacts">
                         <div class="heading">Contact</div>
-                        <div class="details">Address: <a href="">Amamorley-Canada Junction,GA</a></div>
-                        <div class="details">Phone: +233-54-062-1891</div>
-                        <div class="details">Email: gospel1hairstudio@gmail.com</div>
+                        <div class="details">Address:<a href="https://maps.app.goo.gl/5PsgRriPiAnBmPZJ8?g_st=iw"> Amamorley-Canada Junction,GA</a></div>
+                        <div class="details">Phone: <a href="+233-54-062-1891"></a>+233-54-062-1891</div>
+                        <div class="details">Email: <a href="mailto:gospel1hairstudio@gmail.com">gospel1hairstudio@gmail.com</a></div>
                     </div>
                     <div class="socials">
-                        <div class="socialBox">.</div>
-                        <div class="socialBox">.</div>
-                        <div class="socialBox">.</div>
+                        <div class="socialBox" onclick="facebook()"><img src="media/facebook.jpg" alt=""></div>
+                        <div class="socialBox" onclick="instagram()"><img src="media/instagram.jpeg" alt=""></div>
+                        <div class="socialBox" onclick="tiktok()"><img src="media/tiktok.webp" alt=""></div>
+                        <div class="socialBoxSnap" onclick="snapchat()"><img src="media/snapchat.jpeg" alt=""></div>
                     </div>
                 </div>
                 <div class="copyright">Copyright &copy; 2024 SmartLink | All rights reserved.</div>
@@ -202,23 +212,23 @@
         </div>
     </div>
     <div class="footer">
-        <div class="nav" onclick="window.location.href='#main'">
-            <div class="navlogo"></div>
+        <div class="nav" onclick="window.location.href='gospel1barbershop.html'">
+            <div class="navlogo"><img src="media/home.svg" alt=""></div>
             <div class="navtext">Home</div>
         </div>
         <div class="nav" onclick="window.location.href='#servicess'">
-            <div class="navlogo"></div>
+            <div class="navlogo"><img src="media/services.webp" alt=""></div>
             <div class="navtext">Services</div>
         </div>
         <div class="nav" id="bAppointment">
             <div class="navlogoplus">B</div>
         </div>
         <div class="nav" onclick="window.location.href='https://maps.app.goo.gl/5PsgRriPiAnBmPZJ8?g_st=iw'">
-            <div class="navlogo"></div>
+            <div class="navlogo"><img src="media/location.jpeg" alt=""></div>
             <div class="navtext">Visit Us</div>
         </div>
         <div class="nav">
-            <div class="navlogo"></div>
+            <div class="navlogo"><img src="media/about-us.svg" alt=""></div>
             <div class="navtext">About</div>
         </div>
     </div>
