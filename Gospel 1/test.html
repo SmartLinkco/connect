@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <style>
+        /* Basic styling for the page */
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        #appointments {
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .bookMain {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            z-index: 1001;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .bookAppointment {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .bookText {
+            font-size: 1.5em;
+        }
+
+        .exit {
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 1000;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .submit, .cancel {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .submit {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+
+        .cancel {
+            background-color: #f44336;
+            color: white;
+            border: none;
+        }
+
+        .confirmation-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            z-index: 1001;
+            text-align: center;
+        }
+
+        .confirmation-popup button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<button id="appointments">Book Appointment</button>
+
+<div class="bookMain" id="bookMain">
+    <div class="bookAppointment">
+        <div class="bookText">Book appointment</div>
+        <div class="exit" id="closeBookMain">x</div>
+    </div>
+    <form action="">
+        <div class="appointmentAvenue">
+            <div class="formSection">
+                <div class="list"><label for="name">NAME</label></div><input type="text" required>
+                <div class="list"><label for="name">EMAIL ADDRESS</label></div><input type="email" required>
+                <div class="list"><label for="name">PHONE</label></div><input type="number" required>
+                <div class="list"><label for="name">LOCATION</label></div><input type="text" required>
+                <div class="list"><label for="name">BARBER</label></div>
+                <select name="barber" id="barber">
+                    <option value="Gospel 1">Samuel Bimpong (Gospel 1)</option>
+                    <option value="Stephen">Stephen Takyi (Obibinii)</option>
+                    <option value="Small Boi">Small Boi</option>
+                </select>
+            </div>
+            <div class="bookingDates">
+                <div class="container">
+                    <table class="appointment-table">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th id="day-0"></th>
+                                <th id="day-1"></th>
+                                <th id="day-2"></th>
+                                <th id="day-3"></th>
+                                <th id="day-4"></th>
+                                <th id="day-5"></th>
+                                <th id="day-6"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>09:00 AM</td>
+                                <td class="booked">Booked</td>
+                                <td class="available">Available</td>
+                                <td class="booked">Booked</td>
+                                <td class="available">Available</td>
+                                <td class="booked">Booked</td>
+                                <td class="available">Available</td>
+                                <td class="available">Available</td>
+                            </tr>
+                            <tr>
+                                <td>10:00 AM</td>
+                                <td class="available">Available</td>
+                                <td class="booked">Booked</td>
+                                <td class="available">Available</td>
+                                <td class="booked">Booked</td>
+                                <td class="available">Available</td>
+                                <td class="available">Available</td>
+                                <td class="booked">Booked</td>
+                            </tr>
+                            <tr>
+                                <td>11:00 AM</td>
+                                <td class="booked">Booked</td>
+                                <td class="available">Available</td>
+                                <td class="booked">Booked</td>
+                                <td class="available">Available</td>
+                                <td class="booked">Booked</td>
+                                <td class="available">Available</td>
+                                <td class="available">Available</td>
+                            </tr>
+                            <tr>
+                                <td>12:00 PM</td>
+                                <td class="available">Available</td>
+                                <td class="booked">Booked</td>
+                                <td class="available">Available</td>
+                                <td class="booked">Booked</td>
+                                <td class="available">Available</td>
+                                <td class="available">Available</td>
+                                <td class="booked">Booked</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="actions">
+            <div class="cancel" id="cancel">CANCEL</div>
+            <input id="bookAppointment" class="submit" type="submit" value="BOOK NOW">
+        </div>
+    </form>
+</div>
+
+<div class="overlay" id="overlay"></div>
+<div class="confirmation-popup" id="confirmationPopup">
+    <h1>Appointment Confirmed!</h1>
+    <p>Your appointment has been successfully booked.</p>
+    <button onclick="goBackHome()">Go Back Home</button>
+</div>
+
+<script>
+    document.getElementById('appointments').addEventListener('click', function() {
+        document.getElementById('bookMain').style.display = 'block';
+        document.getElementById('overlay').style.display = 'block';
+    });
+
+    document.getElementById('closeBookMain').addEventListener('click', function() {
+        document.getElementById('bookMain').style.display = 'none';
+        document.getElementById('overlay').style.display = 'none';
+    });
+
+    document.getElementById('cancel').addEventListener('click', function() {
+        document.getElementById('bookMain').style.display = 'none';
+        document.getElementById('overlay').style.display = 'none';
+    });
+
+    function goBackHome() {
+        // Add your redirect logic here
+        window.location.href = 'index.php'; // Example redirect
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    padding: 90px 20px;
+    background-image: url(media/IMG_0831.jpg);
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    font-size: smaller;
+    background-color: black;
+    opacity: 50%;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+.leftSide{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav{
+    margin-right: 20px;
+    padding: 5px;
+}
+
+.nav:hover{
+    cursor: pointer;
+    border-bottom: 1.5px solid orange;
+}
+
+.nav:active{
+    border-bottom: 1px solid orange;
+}
+
+.rightSide{
+    width: 100px;
+    text-align: right;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    height: 400px;
+    background-color: rgb(6, 6, 24);
+    opacity: 90%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border: 0.5px solid white;
+}
+
+.barberStats{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 30px;
+}
+
+.barberImage{
+    flex: 1;
+}
+
+.barberImage img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.nickName {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.name{
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.about{
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.book{
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 3px;
+}
+
+.book:hover {
+    cursor: pointer;
+    color: blue;
+    background-color: white;
+    transition: 0.5s;
+
+}
+
+.barberImage{
+    border: 1px solid white;
+    border-radius: 50%;
+    height: 300px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+}
+
+.footerLeft{
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
+.dot{
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: white;
+    margin-right: 10px;
+}
+
+.circle{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white; 
+}
+
+@media (max-width: 929px) {
+    .nickName {
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .barberImage{
+        border: 1px solid white;
+        border-radius: 50%;
+        height: 200px;
+        margin-right: 20px;
+    }
+}
+
+@media (min-width: 930px) {
+    .barberImage img{
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+    }
+}
