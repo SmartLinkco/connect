@@ -388,7 +388,9 @@ a,
     width: 40px;
     height: 40px;
     background-color: rgb(27, 27, 28);
+    display: flex;
     align-content: center;
+    justify-content: center;
 }
 
 .socialBox:hover,
