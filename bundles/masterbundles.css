@@ -29,7 +29,25 @@ body {
     color: red;
 }
 
-.notice{
+#offNotice{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    padding: 60px 30px;
+    color: white;
+    display: none;
+    margin: 50px 0;
+    border-radius: 5px;
+}
+
+#datetime{
+    display: none;
+}
+
+#notice{
     color: #04a804;
     text-align: center;
     margin: 10px;
