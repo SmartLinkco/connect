@@ -51,7 +51,8 @@ body {
     color: #04a804;
     text-align: center;
     margin: 10px;
-    font-weight: 800;
+    font-weight: 400;
+    font-size: smaller;
 }
 
 #trigger {
