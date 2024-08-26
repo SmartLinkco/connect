@@ -55,6 +55,13 @@ body {
     font-size: smaller;
 }
 
+#unavailableNotice{
+    font-size: 10px;
+    text-align: center;
+    color: red;
+    margin-top: 90px;
+}
+
 #trigger {
     width: 30px;
     display: flex;
