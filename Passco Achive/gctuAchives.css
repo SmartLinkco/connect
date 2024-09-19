@@ -10,12 +10,22 @@
     /* line-height: 1.6; */
     background-color: #becff0;
   }
+
+  img {
+    border-radius: 50%;
+  }
   
   header {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
     width: 100%;
+    position: fixed;
+  }
+
+  h2 {
+    text-align: center;
+    padding-top: 10px;
   }
   
   nav {
@@ -30,6 +40,7 @@
   .nav-links {
     list-style: none;
     display: flex;
+    max-width: 700px;
   }
   
   .nav-links li {
@@ -39,10 +50,11 @@
   .nav-links a {
     color: #fff;
     text-decoration: none;
+    font-size: 12px;
   }
   
   .hero {
-    background-image: url('banner.jpg'); /* Replace with actual image path */
+    background-image: url('media/'); /* Replace with actual image path */
     background-size: cover;
     background-position: center;
     padding: 100px 20px;
@@ -66,7 +78,7 @@
   
   .search-section {
     background-color: #fff;
-    padding: 50px 20px;
+    padding: 60px 20px;
     text-align: center;
   }
   
@@ -121,12 +133,17 @@
     text-align: center;
     padding: 20px;
   }
+
+  .footer-content p{
+    font-size: smaller;
+    font-weight: 100;
+  }
   
   .footer-links {
     list-style: none;
     display: flex;
     justify-content: center;
-    padding: 0;
+    padding-top: 30px;
   }
   
   .footer-links li {
@@ -134,7 +151,8 @@
   }
   
   .footer-links a {
-    color: #fff;
+    color: #6d55f6;
     text-decoration: none;
+    font-size: 11px;
   }
   
