@@ -215,13 +215,15 @@
             // let firstName = document.getElementById('first-name').value;
             // let lastName = document.getElementById('last-name').value;
             let beneficiaryNumber = document.getElementById('beneficiaryNumber').value;
+            // let beneficiaryNumberString = String(beneficiaryNumber); // Convert to string
+            // let formattedNumber = beneficiaryNumberString.replace(/^0/, '+233');
             let network_type = document.getElementById('network_type').value;
             let amount = document.getElementById('amount').value * 100; // Convert to kobo
             const bundles = JSON.parse(localStorage.getItem('bundles')) || [];
             let gigSize = parseFloat(bundles[0].size);
 
             // Generate a custom reference or get it from a form field
-            let customReference = beneficiaryNumber + ' ' + network_type + '-' + gigSize + 'GB' + '--' + new Date().getTime(); // Example custom reference
+            let customReference = beneficiaryNumber + '-' + network_type + '-' + gigSize + 'GB' + '--' + new Date().getTime(); // Example custom reference
 
             let handler = PaystackPop.setup({
                 key: 'pk_live_b115ad14040e0e8b3e0c5f09cbbad902565b5b6b', // Replace with your Paystack public key
