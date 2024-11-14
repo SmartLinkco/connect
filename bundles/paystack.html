@@ -168,45 +168,6 @@
         const networkType = localStorage.getItem('networkType');
         document.getElementById('network_type').value = `${networkType}`;
 
-        // // Function to retrieve and use the networkType from local storage
-        // function getNetworkType() {
-        //     var networkType = localStorage.getItem('networkType');
-        //     if (networkType) {
-        //         console.log('Retrieved network type from local storage:', networkType);
-        //         // Use the networkType as needed
-        //     } else {
-        //         console.log('No network type found in local storage.');
-        //     }
-        // }
-
-        // Call this function on page load to get the network type from local storage
-        //getNetworkType();
-
-        // function payWithPaystack(e) {
-        //     e.preventDefault();
-
-        //     let email = document.getElementById('email-address').value;
-        //     let firstName = document.getElementById('first-name').value;
-        //     let lastName = document.getElementById('last-name').value;
-        //     let beneficiaryNumber = document.getElementById('beneficiaryNumber').value;
-        //     let amount = document.getElementById('amount').value * 100;
-
-        //     let handler = PaystackPop.setup({
-        //         //key: 'pk_live_b115ad14040e0e8b3e0c5f09cbbad902565b5b6b', // Replace with your public key
-        //         key: 'pk_test_1e1a90a12cbd41ded7cf2ed2d87a8676e4b38995', // Replace with your public key
-        //         email: email,
-        //         currency: 'GHS',
-        //         amount: amount,
-        //         ref: beneficiaryNumber, //''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference
-        //         callback: function(response){
-        //             let message = `Payment complete! Reference: ${beneficiaryNumber}` + response.reference;
-        //             alert(message);
-        //         }
-        //     });
-
-        //     handler.openIframe();
-        // }
-
         function payWithPaystack(e) {
             e.preventDefault();
 

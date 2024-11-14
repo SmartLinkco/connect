@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="media/favicon.jpg" type="image/x-icon">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-TileColor" content="#000">
+    <meta name="theme-color" content="#000">
+    <meta name="theme-color" content="#33CCFF">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Master Bundles</title>
+    <link rel="stylesheet" href="masterbundles.css">
+</head>
+<body>
+    <div id="header">
+        <div id="trigger">
+            <div id="bars"></div>
+            <div id="bars"></div>
+            <div id="bars"></div>
+        </div>
+        <div id="shortcut">
+            <div id="access">+ Wallet Credit </div>
+            <div id="accesss" onclick="afa()">&#8373; AFA Registration</div>
+        </div>
+    </div>
+    <div id="main">
+        <div id="back_arrow" onclick="window.history.back()"> &#8592; Go back</div>
+        <div id="waec">
+            <div id="waecInfo">WAEC CHECKER</div>
+        </div>
+        <div id="openPromptButton" onclick="bece(); network('bece');">
+            <div class="bundle" id="gig">BECE 2024, BECE OLD</div>
+            <div id="gig_amount">&#8373; <span class="bundle">BUY</span></div>
+        </div>
+        <div id="openPromptButton" onclick="wassce(); network('wassce');">
+            <div id="gig">WASSCE, SSCE, ABCE, GBCE</div>
+            <div id="gig_amount">&#8373; <span id="gig_number">BUY</span></div>
+        </div>
+        
+        <div id="support">
+            <img src="media/support.jpeg" alt="support">
+            <div id="support_text">Support</div>
+        </div> 
+        <div id="sidebar">
+            <div class="content">
+                <div id="logo">
+                    <div id="logopic"><img src="media/favicon.jpeg" alt=""></div>
+                </div>
+                <div id="user">
+                    <div id="userpic"><img src="media/user.jpg" alt=""></div>
+                    <div id="username">Guest User</div>
+                    <div id="email">bundlesHouse@smartlink.co</div>
+                </div>
+                <div id="navigations">
+                    <div id="sections">
+                        <div id="icon"><img src="media/admin.jpg" alt=""></div>
+                        <div id="action">Admin</div>
+                    </div>
+                    <div id="sections">
+                        <div id="icon"><img src="media/home.jpg" alt=""></div>
+                        <div id="action" onclick="home();">Home</div>
+                    </div>
+                    <div id="sections">
+                        <div id="icon"><img src="media/transactions.png" alt=""></div>
+                        <div id="action">General Transactions</div>
+                    </div>
+                    <div id="sections" onclick="flyer()">
+                        <div id="icon"><img src="media/api.jpg" alt=""></div>
+                        <div id="action">Create Flyer</div>
+                    </div>
+                    <div id="sections">
+                        <div id="icon"><img src="media/profile.png" alt=""></div>
+                        <div id="action">Profile</div>
+                    </div>
+                    <div id="sections">
+                        <div id="icon"><img src="media/signup.jpg" alt=""></div>
+                        <div id="action">Sign Up</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div id="footer">
+        <div id="frame">
+            <div id="icons"></div>
+            <div id="text">Home</div>
+        </div>
+        <div id="frame">
+            <div id="icons"></div>
+            <div id="text">History</div>
+        </div>
+        <div id="frame">
+            <div id="icons"></div>
+            <div id="text">Notifications</div>
+        </div>
+        <div id="frame">
+            <div id="icons"></div>
+            <div id="text">Profile</div>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('previousPageForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var amount = document.getElementById('amount').value;
+            localStorage.setItem('amount', amount);
+            window.location.href = 'paystack.html'; // Redirect to the new page
+        });
+    </script>
+    <script src="waec.js"></script>
+    <script src="masterbundles.js"></script>
+</body>
+</html>

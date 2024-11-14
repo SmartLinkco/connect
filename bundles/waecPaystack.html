@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="media/favicon.jpg" type="image/x-icon">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-TileColor" content="#000">
+    <meta name="theme-color" content="#000">
+    <meta name="theme-color" content="#33CCFF">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Bundle Sales Platform</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        /* Form Container */
+        #paymentForm {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        /* Form Title */
+        #paymentForm h2 {
+            text-align: center;
+            color: #0056b3; /* AirtelTigo blue */
+            margin-bottom: 20px;
+            font-size: 24px;
+            position: relative;
+        }
+
+        #paymentForm h2:before {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #ffc20e; /* MTN yellow */
+        }
+
+        /* Form Group */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        /* Submit Button */
+        .form-submit {
+            text-align: center;
+        }
+
+        .form-submit button {
+            background: #e4002b; /* AirtelTigo red */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .form-submit button:hover {
+            background: #d40027; /* Darker red for hover effect */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            #paymentForm {
+                padding: 15px;
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form id="paymentForm">
+        <h2>@ Bundles House</h2>
+         <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email-address" required />
+        </div>
+<!--        <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" />
+        </div>-->
+        <div class="form-group">
+            <label for="beneficiaryNumber">Mobile Number</label>
+            <input type="tel" id="beneficiaryNumber" value="" required />
+            <!-- <input id="customer-phone" type="tel" class="element-is-input" data-validetta="required,number" required=""> -->
+        </div>
+        <div class="form-group">
+            <label for="bundleSize">Number of Checkers</label>
+            <input type="text" id="bundleSize" value="" required readonly />
+        </div>
+        <div class="form-group">
+            <label for="network_type">Type</label>
+            <input type="text" id="network_type" value="" required readonly />
+            <!-- <input id="customer-phone" type="tel" class="element-is-input" data-validetta="required,number" required=""> -->
+        </div>
+        <div class="form-group">
+            <label for="amount">Amount</label>
+            <input type="tel" id="amount" value="" required readonly />
+        </div>
+        <div class="form-submit">
+            <button type="submit" onclick="payWithPaystack(event)">Pay</button>
+        </div>
+    </form>
+    <script>
+        //
+        document.addEventListener('DOMContentLoaded', function() {
+            // Retrieve bundles from localStorage
+            const bundles = JSON.parse(localStorage.getItem('bundles')) || [];
+            
+            // Assuming you want to display the first item's amount
+            if (bundles.length > 0) {
+                const amount = parseFloat(bundles[0].amount); // Convert amount to float if necessary
+                const size = parseFloat(bundles[0].size); // Convert size to float if necessary
+                const amountField = document.getElementById('amount');
+                const sizeField = document.getElementById('bundleSize'); 
+                if (amountField) {
+                    amountField.value = amount.toFixed(2); // Display amount in input field
+                    sizeField.value = `${size}`
+                } else {
+                    console.error('Element with id "amount" not found.');
+                }
+            }
+        });
+
+        const storedData = localStorage.getItem('storedValue');
+        document.getElementById('beneficiaryNumber').value = `${storedData}`;
+
+        const networkType = localStorage.getItem('networkType');
+        document.getElementById('network_type').value = `${networkType}`;
+
+        function payWithPaystack(e) {
+            e.preventDefault();
+
+            // Get form values
+            let email = document.getElementById('email-address').value;
+            let beneficiaryNumber = document.getElementById('beneficiaryNumber').value;
+            let network_type = document.getElementById('network_type').value;
+            let amount = document.getElementById('amount').value * 100; // Convert to kobo
+            const bundles = JSON.parse(localStorage.getItem('bundles')) || [];
+            let gigSize = parseFloat(bundles[0].size);
+
+            // Generate a custom reference or get it from a form field
+            let customReference = beneficiaryNumber + '-' + network_type + '-' + gigSize + 'GB' + '--' + new Date().getTime(); // Example custom reference
+
+            let handler = PaystackPop.setup({
+                key: 'pk_live_b115ad14040e0e8b3e0c5f09cbbad902565b5b6b', // Replace with your Paystack public key
+                email: email,
+                amount: amount,
+                currency: 'GHS',
+                ref: customReference, // Custom reference
+                callback: function(response) {
+                    // Payment succeeded
+                    let reference = response.reference;
+                    alert('Payment complete! Reference: ' + reference);
+                    window.location.href = 'masterbundles.html';
+
+                    // Optionally, send the form data and reference to your server
+                    //sendPaymentDetailsToServer(email, firstName, lastName, beneficiaryNumber, amount, reference);
+                },
+                onClose: function() {
+                    alert('Transaction was not completed, window closed.');
+                },
+            });
+
+            handler.openIframe();
+        }
+
+        function sendPaymentDetailsToServer(email, firstName, lastName, beneficiaryNumber, amount, reference) {
+            let paymentDetails = {
+                email: email,
+                firstName: firstName,
+                lastName: lastName,
+                beneficiaryNumber: beneficiaryNumber,
+                amount: amount,
+                reference: reference
+            };
+
+            fetch('your-server-endpoint', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(paymentDetails)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                alert('Payment details sent to the server successfully');
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('Error sending payment details to the server');
+            });
+        }
+    </script>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <!-- <script src="paystack.js"></script> -->
+    <script src="masterbundles.js"></script>
+</body>
+</html>

@@ -58,10 +58,17 @@ function saveBundle(size, amount) {
     bundles.push({ size, amount });
     localStorage.setItem('bundles', JSON.stringify(bundles));
     localStorage.setItem('bundlePrice', bundles.amount);
-    //alert(`${size} bundle for $${amount} has been added.`);
     document.getElementById('overlay').style.display = 'flex';
     document.getElementById('gig_number_show').innerText =`${size}`;
     document.getElementById('amount').innerText =`${amount}`;
+}
+
+function saveChecker(size, amount) {
+    //const bundles = []; //JSON.parse(localStorage.getItem('bundles')) || [];
+    bundles.push({ size, amount });
+    localStorage.setItem('bundles', JSON.stringify(bundles));
+    localStorage.setItem('bundlePrice', bundles.amount);
+    window.location.href = 'waecPaystack.html';
 }
 
 function saveValue() {
@@ -106,6 +113,10 @@ function network(type) {
         networkType = 'MTN';
     } else if (type === 'at') {
         networkType = 'AIRTELTIGO';
+    } else if (type === 'bece') {
+        networkType = 'BECECHECKER';
+    } else if (type === 'wassce') {
+        networkType = 'WASSCECHECKER';
     } else {
         networkType = 'TELECEL';
     }
