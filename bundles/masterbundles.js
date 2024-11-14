@@ -109,20 +109,31 @@ if (data) {
 
 function network(type) {
     var networkType;
-    if (type === 'mtn') {
-        networkType = 'MTN';
-    } else if (type === 'at') {
-        networkType = 'AIRTELTIGO';
-    } else if (type === 'bece') {
-        networkType = 'BECECHECKER';
-    } else if (type === 'wassce') {
-        networkType = 'WASSCECHECKER';
-    } else {
-        networkType = 'TELECEL';
+
+    switch (type) {
+        case 'mtn':
+            networkType = 'MTN';
+            break;
+        case 'at':
+            networkType = 'AIRTELTIGO';
+            break;
+        case 'bece':
+            networkType = 'BECECHECKER';
+            break;
+        case 'wassce':
+            networkType = 'WASSCECHECKER';
+            break;
+        case 'placement':
+            networkType = 'SHSPLACEMENT';
+            break;
+        default:
+            networkType = 'TELECEL';
     }
+
     // Save the networkType to local storage
     localStorage.setItem('networkType', networkType);
 }
+
 
 function afa(){
     window.location.href='https://paystack.com/pay/afa_registration';
