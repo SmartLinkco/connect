@@ -112,7 +112,7 @@ function network(type) {
 
     switch (type) {
         case 'mtn':
-            networkType = 'MTN';
+            networkType = 'MTNBUNDLE';
             break;
         case 'at':
             networkType = 'AIRTELTIGO';
