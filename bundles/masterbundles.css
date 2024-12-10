@@ -39,7 +39,7 @@ body {
     right: 8px;
     border-top-right-radius: 40px;
     width: 80%;
-    opacity: 80%;
+    opacity: 90%;
     font-weight: 700;
     border-top-left-radius: 60%;
     border-bottom-left-radius: 60%;
@@ -60,7 +60,7 @@ body {
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    opacity: 80%;
+    opacity: 90%;
     right: 8px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -124,9 +124,9 @@ body {
     padding: 0.7em 1.4em 0.7em 1.1em;
     color: white;
     background: #ad5389;
-    background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+    background: linear-gradient(0deg, rgb(167, 42, 20) 0%, rgb(247, 102, 102) 100%);
     border: none;
-    box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+    box-shadow: 0 0.7em 1.5em -0.5em #a7141498;
     letter-spacing: 0.05em;
     border-radius: 20em;
     cursor: pointer;
@@ -136,7 +136,7 @@ body {
   }
   
   .button-88:hover {
-    box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+    box-shadow: 0 0.5em 1.5em -0.5em #a73e1498;
   }
   
   .button-88:active {
