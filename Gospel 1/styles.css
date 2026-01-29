@@ -1,4 +1,4 @@
-.header{
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -15,11 +15,11 @@
     z-index: 10;
 }
 
-body{
+body {
     background-image: url(media/male\ back.jpeg);
 }
 
-#icon{
+#icon {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -29,13 +29,13 @@ body{
     justify-content: center;
 }
 
-#icon img{
+#icon img {
     width: 30px;
     height: 30px;
     border-radius: 50%;
 }
 
-.main{
+.main {
     width: 100%;
     padding: 60px 0 0 0;
     justify-content: center;
@@ -62,12 +62,15 @@ body{
     overflow: auto;
     padding: 10px;
     box-sizing: border-box;
-    scrollbar-width: none; /* For Firefox */
-    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    scrollbar-width: none;
+    /* For Firefox */
+    -ms-overflow-style: none;
+    /* For Internet Explorer and Edge */
 }
 
 .shoppic::-webkit-scrollbar {
-    display: none; /* For Chrome, Safari, and Opera */
+    display: none;
+    /* For Chrome, Safari, and Opera */
 }
 
 .shoppic img {
@@ -78,7 +81,7 @@ body{
     border: 1px solid white;
 }
 
-.shopName{
+.shopName {
     display: none;
     font-size: 30px;
     margin-left: 10px;
@@ -104,19 +107,19 @@ body{
 
 #appointments:hover,
 #barbers:hover,
-#services:hover{
-cursor: pointer;
-padding: 2px;
+#services:hover {
+    cursor: pointer;
+    padding: 2px;
 }
 
-.quote{
+.quote {
     padding: 20px 0;
     display: flex;
     align-items: center;
     border-top: 2px solid white;
 }
 
-.quotationMarks{
+.quotationMarks {
     width: 90px;
     height: 60px;
     font-size: 40px;
@@ -129,12 +132,12 @@ padding: 2px;
     margin-right: 20px;
 }
 
-.quoteText{
+.quoteText {
     font-size: 20px;
     font-weight: 700;
 }
 
-#pic{
+#pic {
     width: 80px;
     display: flex;
     align-items: center;
@@ -148,27 +151,27 @@ padding: 2px;
     border-radius: 5px;
 }
 
-#picback img{
+#picback img {
     width: 35px;
     height: 35px;
     border-radius: 5px;
 }
 
-#pictext{
+#pictext {
     flex: 1;
 }
 
-#arrow{
+#arrow {
     width: 50px;
 }
 
-.logo-section{
+.logo-section {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.logo{
+.logo {
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -181,21 +184,24 @@ padding: 2px;
     box-sizing: border-box;
     justify-content: center;
     overflow-x: auto;
-    scrollbar-width: none; /* For Firefox */
-    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    scrollbar-width: none;
+    /* For Firefox */
+    -ms-overflow-style: none;
+    /* For Internet Explorer and Edge */
 }
 
 .logo::-webkit-scrollbar {
-    display: none; /* For Chrome, Safari, and Opera */
+    display: none;
+    /* For Chrome, Safari, and Opera */
 }
 
-.logo img{
+.logo img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
 }
 
-.footer{
+.footer {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -212,7 +218,7 @@ padding: 2px;
     opacity: 0.9;
 }
 
-.nav{
+.nav {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -226,7 +232,7 @@ padding: 2px;
     margin: 5px;
 }
 
-.navlogo img{
+.navlogo img {
     width: 20px;
     height: 20px;
     /* border-radius: 50%; */
@@ -241,7 +247,7 @@ padding: 2px;
     margin-top: -50px;
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     font-size: 35px;
     font-weight: -100;
     border: 3px solid white;
@@ -250,13 +256,13 @@ padding: 2px;
 
 .navlogo:hover,
 .navlogoplus:hover,
-.navtext:hover{
- cursor: pointer;
- font-size: 14px;
+.navtext:hover {
+    cursor: pointer;
+    font-size: 14px;
 }
 
 .servicess,
-.pricing{
+.pricing {
     width: 100%;
     height: fit-content;
     background-color: rgb(54, 47, 47);
@@ -268,18 +274,18 @@ padding: 2px;
     margin-bottom: 50px;
 }
 
-.pricing{
+.pricing {
     background-image: url(media/IMG_0636.jpg);
-    background-size:auto;
-    background-position:30%;
+    background-size: auto;
+    background-position: 30%;
     opacity: 0.8;
 }
 
-.serviceSections{
+.serviceSections {
     margin-bottom: 30px;
 }
 
-.serviceCollection{
+.serviceCollection {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -288,7 +294,7 @@ padding: 2px;
     margin-top: 10px;
 }
 
-.topic{
+.topic {
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -296,43 +302,43 @@ padding: 2px;
     margin-bottom: 30px;
 }
 
-.longDash{
+.longDash {
     background-color: aliceblue;
     width: 80px;
     height: 2px;
     margin: 10px 0;
 }
 
-.topicText{
+.topicText {
     font-size: 40px;
 }
 
-.dashWithText{
+.dashWithText {
     width: 65%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.shortDash{
+.shortDash {
     background-color: aliceblue;
     width: 50px;
     height: 2px;
-    margin: 10px 0; 
+    margin: 10px 0;
 }
 
-.serviceHead{
+.serviceHead {
     font-size: 20px;
     font-weight: 700;
     padding: 0 0 10px 0;
 }
 
-.serviceDescription{
+.serviceDescription {
     color: rgb(186, 189, 192);
     font-weight: 600px;
 }
 
-.allPrices{
+.allPrices {
     margin-top: 40px;
     border: 1px solid aliceblue;
     padding: 10px 20px;
@@ -340,16 +346,16 @@ padding: 2px;
     display: inline-block;
 }
 
-.end{
+.end {
     font-family: open sans-serif Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.heading{
+.heading {
     font-size: 25px;
     padding: 20px 0;
 }
 
-.details{
+.details {
     padding: 10px 0;
     font-weight: 700;
     font-size: 12px;
@@ -360,31 +366,31 @@ a,
     color: rgb(151, 63, 70);
 }
 
-#details{
+#details {
     cursor: pointer;
 }
 
-.endDetails{
+.endDetails {
     display: flex;
     justify-content: space-between;
     padding: 50px 0;
 }
 
 .openingHours,
-.contacts{
+.contacts {
     flex: 1;
 }
 
-.socials{
+.socials {
     width: 22%;
     display: flex;
     align-items: center;
-    justify-content:space-between;
+    justify-content: space-between;
     box-sizing: border-box;
 }
 
 .socialBox,
-.socialBoxSnap{
+.socialBoxSnap {
     width: 40px;
     height: 40px;
     background-color: rgb(27, 27, 28);
@@ -394,12 +400,12 @@ a,
 }
 
 .socialBox:hover,
-.socialBoxSnap:hover{
+.socialBoxSnap:hover {
     cursor: pointer;
 }
 
 .socialBox img,
-.socialBoxSnap img{
+.socialBoxSnap img {
     width: 40px;
 }
 
@@ -407,12 +413,12 @@ a,
     background-color: black;
 }
 
-a{
+a {
     text-decoration: none;
     color: ;
 }
 
-.copyright{
+.copyright {
     background-color: rgb(4, 4, 37);
     color: white;
     text-align: center;
@@ -422,34 +428,40 @@ a{
 }
 
 @media (min-width: 930px) {
-    .shoppic{
+    .shoppic {
         display: block;
-    } 
+    }
+
     .sections {
         margin-left: 410px;
     }
-    .logo-section{
+
+    .logo-section {
         display: flex;
         align-items: center;
         justify-content: right;
     }
+
     .shopName {
         display: block;
     }
-    body{
+
+    body {
         display: flex;
         flex-direction: column;
     }
-    .footer{
+
+    .footer {
         display: none;
     }
-    .servicess{
+
+    .servicess {
         margin-top: 50px;
     }
 }
 
 @media (max-width: 929px) {
-    .shoppic{
+    .shoppic {
         display: block;
         position: absolute;
         top: 480px;
@@ -459,10 +471,10 @@ a{
         height: 300px;
         background-color: black;
         border-top-right-radius: 50px;
-        border-bottom-left-radius: 50px; 
+        border-bottom-left-radius: 50px;
     }
 
-    .shopName{
+    .shopName {
         display: block;
         font-size: 30px;
         margin-left: 10px;
@@ -470,21 +482,91 @@ a{
         top: 5px;
     }
 
-    .servicess{
+    .servicess {
         margin-top: 350px;
     }
 
-    .endDetails{
+    .endDetails {
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
     }
 
-    .contacts{
+    .contacts {
         margin-bottom: 40px;
     }
-    .socials{
+
+    .socials {
         width: 70%;
+    }
+}
+
+/* Modern Header Styles */
+.modern-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    border-radius: 0 0 15px 15px;
+    /* Slight curve at bottom */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.header-logo {
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    height: 50px;
+    width: auto;
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1));
+}
+
+.header-content:hover .header-logo {
+    transform: scale(1.15) rotate(-5deg);
+}
+
+.header-title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #000000 0%, #434343 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.4s ease;
+}
+
+.header-content:hover .header-title {
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile adjustments for header */
+@media (max-width: 600px) {
+    .header-title {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    .header-logo {
+        height: 40px;
     }
 }
